@@ -1,5 +1,7 @@
 #pragma once
 
+#include "logger/logger.h"
+
 #include <stdio.h>
 
 #include <atomic>
@@ -7,8 +9,8 @@
 #include <optional>
 #include <vector>
 
-#define LOG_INFO(fmt, ...) printf("[+] " fmt "\n", ##__VA_ARGS__)
-#define LOG_ERROR(fmt, ...) printf("[-] " fmt "\n", ##__VA_ARGS__)
+#define LOG_INFO(fmt, ...)  _logger::getSingleton().log("[+] " fmt "\n", __VA_ARGS__)
+#define LOG_ERROR(fmt, ...) _logger::getSingleton().log("[-] " fmt "\n", __VA_ARGS__)
 
 #define ABSOLUTE(wait) (wait)
 #define RELATIVE(wait) (-(wait))
@@ -17,4 +19,3 @@
 #define MICROSECONDS(micros) (((signed __int64)(micros)) * NANOSECONDS(1000L))
 #define MILLISECONDS(milli) (((signed __int64)(milli)) * MICROSECONDS(1000L))
 #define SECONDS(seconds) (((signed __int64)(seconds)) * MILLISECONDS(1000L))
-#define LOG_ERROR(fmt, ...) printf("[-] " fmt "\n", ##__VA_ARGS__)

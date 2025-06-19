@@ -9,6 +9,7 @@
 #include <queue>
 #include <unordered_map>
 #include <vector>
+#include <algorithm>
 
 /*
  * array of handles which we pass to WaitForMultipleEvents

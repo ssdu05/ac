@@ -31,7 +31,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{3b18467a-4358-45ef-81b1-5c6f9b0b6728}</ProjectGuid>
     <RootNamespace>module</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -213,6 +213,7 @@
     <ClCompile Include="dispatcher\timer.cpp" />
     <ClCompile Include="helper.cpp" />
     <ClCompile Include="imports.cpp" />
+    <ClCompile Include="logger\logger.cpp" />
     <ClCompile Include="module.cpp" />
     <ClCompile Include="client\message_queue.cpp" />
     <ClCompile Include="client\pipe.cpp" />
@@ -232,6 +233,7 @@
     <ClInclude Include="helper.h" />
     <ClInclude Include="imports.h" />
     <ClInclude Include="kernel_interface\kernel_interface.h" />
+    <ClInclude Include="logger\logger.h" />
     <ClInclude Include="module.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
